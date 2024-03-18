@@ -9,7 +9,9 @@ function grid(){
       const cells = document.createElement('div');
       cells.classList.add("cells");
       row.appendChild(cells);
-      cells.textContent = "2";
+      cells.addEventListener('mousedown', ()=>{
+        cells.style.backgroundColor = 'red';
+      })
     }
     container.appendChild(row);
   }
