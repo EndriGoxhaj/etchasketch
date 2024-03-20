@@ -38,4 +38,5 @@ reset.addEventListener('click', ()=>{
     cells.style.backgroundColor = "white";
     
   });
+  
 })
