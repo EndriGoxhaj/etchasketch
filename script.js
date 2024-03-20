@@ -1,8 +1,17 @@
-const container = document.querySelector(".container");
+const canvas = document.querySelector(".canvas");
 const gridSize = prompt("Choose size ")
 const reset = document.querySelector(".reset");
 
-let color = "#000";
+
+
+let color = document.getElementById("color");
+let colorValue;
+colorValue = "black";
+color.addEventListener("change", ()=>{
+  colorValue = color.Value;
+  cells.style.backgroundColor = colorValue;
+  
+})
 
 
 function grid(){
@@ -14,14 +23,15 @@ function grid(){
       cells.classList.add("cells");
       row.appendChild(cells);
       cells.addEventListener('mouseover', ()=>{
-        document.body.style.cursor = "pointer";
-        cells.style.backgroundColor = color;
+        cells.style.cursor = "pointer";
+        cells.style.backgroundColor = colorValue;
       })
     }
-    container.appendChild(row);
+    canvas.appendChild(row);
   }
 }
 grid();
+
 reset.addEventListener('click', ()=>{
   allcells  = document.querySelectorAll(".cells");
   allcells.forEach(cells => {

@@ -3,21 +3,37 @@ body{
   background-color: rgb(49, 50, 53);
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   align-items: center;
   max-width: 100%;
+  margin: 0;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+
+}
+.title{
+  font-size: 70px;
+  align-self: center;
+  margin-bottom: 50px;
+  background-color: aliceblue;
+  padding: none;
 }
 .wrapper{
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
+
 .controls{
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   align-items: center;
+  border-radius: 25px;
 
 }
-.container{
+.canvas{
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -45,4 +61,10 @@ width: 500px;
   width: 100px;
   height: 50px;
   text-align: center;
+}
+#color{
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+
 }
