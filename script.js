@@ -1,17 +1,21 @@
 const canvas = document.querySelector(".canvas");
-const gridSize = prompt("Choose size ")
 const reset = document.querySelector(".reset");
-
-
-
+const eraser = document.querySelector(".eraser");
 let color = document.getElementById("color");
-let colorValue;
-colorValue = "black";
+let colorValue = "#1B1212";
 color.addEventListener("change", ()=>{
-  colorValue = color.Value;
-  cells.style.backgroundColor = colorValue;
-  
+  colorValue = color.value;
 })
+
+let sizerange = document.getElementById("sizerange");
+let gridSize = sizerange.value;
+sizerange.addEventListener("change", ()=>{
+  gridSize = sizerange.value;
+  canvas.innerHTML = "";
+  grid();
+})
+
+
 
 
 function grid(){
@@ -38,5 +42,9 @@ reset.addEventListener('click', ()=>{
     cells.style.backgroundColor = "white";
     
   });
-  
+
 })
+eraser.addEventListener('click', ()=>{
+    colorValue = "white";
+    
+  });

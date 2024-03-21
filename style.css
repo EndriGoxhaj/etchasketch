@@ -1,36 +1,43 @@
 
 body{
-  background-color: rgb(49, 50, 53);
+  background-color: white;
+  /*background-color: rgb(49, 50, 53);*/
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: 100%;
   margin: 0;
+  align-items: center;
 }
+
 .container{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
 
 }
 .title{
   font-size: 70px;
-  align-self: center;
-  margin-bottom: 50px;
-  background-color: aliceblue;
   padding: none;
+  color: rgb(49, 50, 53);
+  
 }
 .wrapper{
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
+}
+.canvas{
+  box-shadow: 0px 0px 20px 10px lightgray;
 }
 
 .controls{
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(49, 50, 53);
   align-items: center;
   border-radius: 25px;
+  justify-content: space-between;
 
 }
 .canvas{
@@ -66,5 +73,16 @@ width: 500px;
   border-radius: 50px;
   width: 50px;
   height: 50px;
+  margin: 20px;
+}
+#sizerange{
+  margin: 20px;
+}
 
+.footer{
+  font-size: 20px;
+  color: rgb(49, 50, 53);
+  justify-self: center;
+  text-align: center;
+  margin-top: 20px;
 }
